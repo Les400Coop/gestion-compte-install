@@ -1,0 +1,56 @@
+parameters:
+    mailer_transport: smtp
+    mailer_host: in-v3.mailjet.com
+    mailer_port: 465
+    mailer_encryption: ssl
+    transactional_mailer_user: admin@les400coop.fr
+    transactional_mailer_user_name: 'les 400 Coop - Espace Membres'
+    emails.base_domain: les400coop.fr
+    emails.contact:
+        from_name: 'Contact Les 400 Coop'
+        address: contact@les400coop.fr
+    emails.member:
+        from_name: 'Membres Les 400 Coop'
+        address: membres@les400coop.fr
+    emails.shift:
+        from_name: 'Créneaux Les 400 Coop'
+        address: creneaux@les400coop.fr
+    emails.formation:
+        from_name: 'Formation Les 400 Coop'
+        address: formations@les400coop.fr
+    emails.admin:
+        from_name: 'Admin Les 400 Coop'
+        address: admin@les400coop.fr
+    emails.noreply:
+        from_name: 'Ne pas répondre'
+        address: noreply@les400coop.fr
+    emails.sendable:
+        - '%emails.contact%'
+        - '%emails.member%'
+        - '%emails.shift%'
+        - '%emails.formation%'
+        - '%emails.admin%'
+        - '%emails.noreply%'
+    router.request_context.host: membres.les400coop.fr
+    router.request_context.scheme: http
+    router.request_context.base_url: null
+    site_name: 'Membres @ Les 400 Coop'
+    project_name: 'les 400 Coop'
+    project_url: 'https://les400coop.fr/'
+    project_url_display: les400coop.fr
+    wiki_keys_url: null
+    main_color: null
+    helloasso_registration_campaign_url: 'https://les400coop.fr/participer/bulletin-dadhesion/'
+    helloasso_api_key: null
+    helloasso_api_password: null
+    due_duration_by_cycle: 180
+    shift_mailer_user: creneaux@les400coop.fr
+    place_local_ip_address: '127.0.0.1,192.168.0.x'
+    min_shift_duration: 90
+    logging.mattermost.enabled: false
+    logging.mattermost.level: critical
+    logging.mattermost.url: 'http://mattermost.localcoop.local'
+    logging.mattermost.channel: null
+    logging.swiftmailer.enabled: false
+    logging.swiftmailer.level: critical
+    logging.swiftmailer.recipient: null
